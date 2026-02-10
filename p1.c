@@ -1,19 +1,19 @@
 #include <stdio.h>
 int main()// Arithmetic Operations 
  {
-    int a, b;
+    float a, b;
 
     printf("Enter the value of a and b ");
-    scanf("%d %d", &a, &b);
+    scanf("%f %f", &a, &b);
 
-    printf("Addition = %d\n", a + b);
+    printf("Addition = %f\n", a + b);
 
-    printf("Subtraction = %d\n", a - b);
+    printf("Subtraction = %f\n", a - b);
 
-    printf("Multiplication = %d\n", a * b);
-    printf("Division = %d\n", a / b);
+    printf("Multiplication = %f\n", a * b);
+    printf("Division = %f\n", a / b);
 
-    printf("Modulus = %f\n", (float)(a % b));
+    printf("Modulus = %d\n", (int)(a % b));
 
     return 0;
 
