@@ -13,7 +13,7 @@ int main()// Arithmetic Operations
     printf("Multiplication = %f\n", a * b);
     printf("Division = %f\n", a / b);
 
-    printf("Modulus = %d\n", (int)(a % b));
+    printf("Modulus = %d\n", (int)a % (int)b);
 
     return 0;
 
