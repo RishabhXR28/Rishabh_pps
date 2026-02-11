@@ -7,6 +7,7 @@ int main(void)
     int Book=250;
     int Butter=150;
     int a,b,c,d,e;
+    printf("Pen = 100\n Geometry_Box = 650\n Red_Bull = 200\n Book = 250\n Butter = 150\n");
     printf("\n ************************* Billing System ************************************");
     printf("\n Pen= %f \n Geometry_Box = %f \n Red_Bull = %f \n Book = %f \n Butter = %f ", Pen,Geometry_Box,Red_Bull,Book,Butter);
     printf("Enter How Many Pen do you want\n");
@@ -22,11 +23,11 @@ int main(void)
     float x;
     x = (Pen*a) + (Geometry_Box*b) + (Red_Bull*c) + (Book*d) + (butter*e);
     printf("Total is %f\n", x);
-    if(x>=5000)
+    if(x>=10000)
     {
         printf("The discounted bill is %f\n", x-x*10/100);
     }
-    else if (x>=2500)
+    else if (x>=5000)
     {
         printf("The discounted bill is %f\n", x-x*5/100);
     }
