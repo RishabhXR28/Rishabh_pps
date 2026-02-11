@@ -7,32 +7,31 @@ int main(void)
     int Book=250;
     int Butter=150;
     int a,b,c,d,e;
-    printf("Pen = 100\n Geometry_Box = 650\n Red_Bull = 200\n Book = 250\n Butter = 150\n");
     printf("\n ************************* Billing System ************************************");
-    printf("\n Pen= %f \n Geometry_Box = %f \n Red_Bull = %f \n Book = %f \n Butter = %f ", Pen,Geometry_Box,Red_Bull,Book,Butter);
+    printf("\n Pen = %d\n Geometry_Box = %d \n Red_Bull = %d \n Book = %d \n Butter = %d\n ", Pen, Geometry_Box, Red_Bull, Book, Butter);
     printf("Enter How Many Pen do you want\n");
-    scanf("%f", &a);
+    scanf("%d", &a);
     printf("Enter How Many Geometry_Box do you want\n");
-    scanf("%f", &b);
+    scanf("%d", &b);
     printf("Enter How Many Red_Bull do you want\n");
-    scanf("%f", &c);
+    scanf("%d", &c);
     printf("Enter How Many Book do you want\n");
-    scanf("%f", &d);
+    scanf("%d", &d);
     printf("Enter How Many Butter do you want\n");
-    scanf("%f", &e);
-    float x;
-    x = (Pen*a) + (Geometry_Box*b) + (Red_Bull*c) + (Book*d) + (butter*e);
-    printf("Total is %f\n", x);
+    scanf("%d", &e);
+    int x;
+    x = (Pen*a) + (Geometry_Box*b) + (Red_Bull*c) + (Book*d) + (Butter*e);
+    printf("Total is %d\n", x);
     if(x>=10000)
     {
-        printf("The discounted bill is %f\n", x-x*10/100);
+        printf("The discounted bill is %d\n", x-x*10/100);
     }
     else if (x>=5000)
     {
-        printf("The discounted bill is %f\n", x-x*5/100);
+        printf("The discounted bill is %d\n", x-x*5/100);
     }
     else
     {
-        printf("No discount. Total bill is %f\n",x);
+        printf("No discount. Total bill is %d\n",x);
     }
 }
