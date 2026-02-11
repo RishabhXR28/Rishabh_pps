@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int n, i;
+    int first=0, second=1, next;
+    printf("Enter the term(n) you want in Fibonacci Series:\n");
+    scanf("%d", &n);
+    
+    if (n < 1)
+    {
+        printf("Please Enter a Natural Number");
+    }
+    else if (n==1)
+    {
+        printf("The %dth term in Fibonnaci Series is %d \n", n, first);
+    }
+    else if (n==2)
+    {
+        printf("The %dth term in Fibonnaci Series is %d\n", n, second);
+    }
+    for (i = 3 ; i <= n ; i++)
+    {
+        next=first+second;
+        first=second;
+        second=next;
+    }
+    printf("The %dth term in Fibonnaci Series is %d\n", n, next);
+    return 0;
+}
