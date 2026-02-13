@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    char ch;
+    int num;
+
+    printf("***************************************\n");
+    printf("       ASCII Conversion Program        \n");
+    printf("***************************************\n");
+
+    printf("Enter a Character to get its ASCII Value\n");
+    printf("Enter Character : ");
+    scanf(" %c", &ch);
+    printf("The ASCII value of '%c' is : %d\n", ch, ch);
+
+    printf("***************************************\n");
+
+    printf("Enter an ASCII Value to get its Character\n");
+    printf("Enter ASCII Value : ");
+    scanf("%d", &num);
+
+    if(num >= 0 && num <= 127)
+    {
+        printf("The Character of ASCII value %d is : '%c'\n", num, num);
+    }
+    else
+    {
+        printf("Invalid ASCII Value! Please enter a value between 0 and 127\n");
+    }
+
+    printf("***************************************\n");
+
+    return 0;
+}
