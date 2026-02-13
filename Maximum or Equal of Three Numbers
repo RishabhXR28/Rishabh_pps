@@ -1,0 +1,67 @@
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter three numbers: \n");
+    printf("Enter first number  : ");
+    scanf("%d", &a);
+    printf("Enter second number : ");
+    scanf("%d", &b);
+    printf("Enter third number  : ");
+    scanf("%d", &c);
+
+    if(a == b && b == c)
+    {
+        printf("All three numbers are Equal : %d = %d = %d\n", a, b, c);
+    }
+    else if(a == b)
+    {
+        printf("First and Second numbers are Equal : %d = %d\n", a, b);
+        if(a > c)
+        {
+            printf("Maximum number is : %d\n", a);
+        }
+        else
+        {
+            printf("Maximum number is : %d\n", c);
+        }
+    }
+    else if(b == c)
+    {
+        printf("Second and Third numbers are Equal : %d = %d\n", b, c);
+        if(b > a)
+        {
+            printf("Maximum number is : %d\n", b);
+        }
+        else
+        {
+            printf("Maximum number is : %d\n", a);
+        }
+    }
+    else if(a == c)
+    {
+        printf("First and Third numbers are Equal : %d = %d\n", a, c);
+        if(a > b)
+        {
+            printf("Maximum number is : %d\n", a);
+        }
+        else
+        {
+            printf("Maximum number is : %d\n", b);
+        }
+    }
+    else if(a > b && a > c)
+    {
+        printf("Maximum number is : %d\n", a);
+    }
+    else if(b > a && b > c)
+    {
+        printf("Maximum number is : %d\n", b);
+    }
+    else
+    {
+        printf("Maximum number is : %d\n", c);
+    }
+
+    return 0;
+}
