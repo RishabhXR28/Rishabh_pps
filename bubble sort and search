@@ -1,62 +1,67 @@
 #include<stdio.h>
 void bubblesort(int arr[], int n)
-
 {
     int i, j, temp;
-    int count=0;
-    for(i=0; i<n-1; i++)
+    int count = 0;
+    int swapped;
+
+    for(i = 0; i < n-1; i++)
     {
-        for(j=0; j<n-i-1; j++)
+        swapped = 0;  
         {
-            if(arr[j]>arr[j+1])
+            if(arr[j] > arr[j+1])
             {
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
                 count++;
+                swapped = 1;  
             }
         }
+        if(swapped == 0)  
+            break;
     }
-     printf("Total no. of swaps: %d \n", count);
+    printf("Total no. of swaps: %d \n", count);
 }
- void prtarray(int arr[], int n)
- {
-     for(int i=0; i<n; i++)
-     {
-         printf("%d \n", arr[i]);
-     }
- }
- 
- int main()
- {
-     int n;
-     printf("Enter the number of elements:");
-     scanf("%d", &n);
-     int arr[n];
-     printf("Enter %d elements:", n);
-     for(int i=0; i<n; i++)
-     scanf("%d", &arr[i]);
-     printf("Original Array:\n");
-     prtarray(arr, n);
-     bubblesort(arr, n);
-     printf("sorted array:\n");
-     prtarray(arr, n);
-     int key;
-      int i;
-      int found=0;
-       printf("Enter element to search:");
-       scanf("%d", &key);
-       for(i = 0; i < n; i++)
-      {
-       if(arr[i] == key)
-     {
-        found = 1;
-        break;
-     }
+
+void prtarray(int arr[], int n)
+{
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d \n", arr[i]);
     }
-      if(found == 1)
-      printf("Element %d found at position %d\n", key, i + 1);
-      else
-      printf("Element not found\n");
-      return 0;
- }
+}
+
+int main()
+{
+    int n;
+    printf("Enter the number of elements:");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:", n);
+    for(int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+    printf("Original Array:\n");
+    prtarray(arr, n);
+    bubblesort(arr, n);
+    printf("Sorted Array:\n");
+    prtarray(arr, n);
+
+    int key, i, found = 0;
+    printf("Enter element to search:");
+    scanf("%d", &key);
+    for(i = 0; i < n; i++)
+    {
+        if(arr[i] == key)
+        {
+            found = 1;
+            break;
+        }
+    }
+    if(found == 1)
+        printf("Element %d found at position %d\n", key, i + 1);
+    else
+        printf("Element not found\n");
+
+    return 0;
+}
